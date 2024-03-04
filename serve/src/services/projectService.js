@@ -1,33 +1,39 @@
 const queries = require('../queries');
+const mongodb = require('../mongodb');
 //const firebase = require('../bd');
 
 const getAllProjects = async ()=>{
     console.log('projects v1 ');
-    const allProjects = await queries.getAllProjects();
+
+    await mongodb.getAllProjects();
+
+    const allProjects = await mongodb.getAllProjects();
+    //const allProjects = await queries.getAllProjects();
     //const allProjects = await firebase.getAllProjects();
     return allProjects;
 }
 
 const getProjectById = async (id)=>{
-    const project = await queries.getProjectById(id);
+    const project = await mongodb.getProjectById(id);
     return project;
 }
 
 const createProject = async (name, body)=>{
 
-    const project =await await queries.createProject(name, body);
+    const project = await mongodb.createProject(name, body);
+    //const project = await queries.createProject(name, body);
     return project;
 }
 
 const updateProject = async (name, body, id)=>{
 
-    const project =await await queries.updateProject(name, body, id);
+    const project = await mongodb.updateProject(name, body, id);
     return project;
 }
 
 const deleteProject = async (id)=>{
 
-    const project =await await queries.deleteProject(id);
+    const project = await mongodb.deleteProject(id);
     return project;
 }
 module.exports = {

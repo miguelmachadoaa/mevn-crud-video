@@ -27,7 +27,7 @@ const createProject = async (req, res)=>{
 
     const project =await projectService.createProject(body.name, body.body);
 
-    if(project.length===0){
+    if(project){
         res.send({ status: "ERROR", data: 'data incomplete' });
     }
     res.send({ status: "OK", data: project });

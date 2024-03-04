@@ -95,6 +95,7 @@
              this.isSaving = false
              this.project.name = ""
              this.project.body = ""
+             this.router.push('/');
              return response
            })
            .catch(error => {
