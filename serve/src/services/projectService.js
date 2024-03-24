@@ -1,6 +1,5 @@
 const queries = require('../queries');
 const mongodb = require('../mongodb');
-//const firebase = require('../bd');
 
 const getAllProjects = async ()=>{
     console.log('projects v1 ');

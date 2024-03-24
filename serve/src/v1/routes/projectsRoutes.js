@@ -14,7 +14,5 @@ router.post('/', projectController.createProject)
 
 router.delete('/:id', projectController.deleteProject)
 
-
-
 module.exports = router;
 
