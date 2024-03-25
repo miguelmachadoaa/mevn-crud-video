@@ -8,6 +8,17 @@
                           class="btn btn-outline-primary"
                           >Create New Project
                       </router-link>
+
+                      <router-link to="/youtube"
+                          class="btn btn-outline-primary"
+                          >View Youtube
+                      </router-link>
+
+                      <router-link to="/video/list"
+                          class="btn btn-outline-primary"
+                          >Videos
+                      </router-link>
+
                   </div>
                   <div class="card-body">
                

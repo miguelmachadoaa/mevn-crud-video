@@ -5,7 +5,7 @@ const mongodb = require('../mongoDbVideo');
 const getAllVideos = async ()=>{
     console.log('videos v1 ');
 
-    await mongodb.getAllVideos();
+    await mongodb.getAll();
 
     const allVideos = await mongodb.getAll();
 
@@ -18,6 +18,8 @@ const getVideoById = async (id)=>{
 }
 
 const createVideo = async (url)=>{
+
+    
 
     const video = await mongodb.create(url);
     return video;

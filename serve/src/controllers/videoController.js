@@ -25,6 +25,8 @@ const getVideoById = async (req, res)=>{
 const createVideo = async (req, res)=>{
     const { body } = req;
 
+    console.log(body.url);
+
     const video =await videoService.createVideo(body.url);
 
     if(video){

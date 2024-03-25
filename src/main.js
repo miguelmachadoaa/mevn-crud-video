@@ -7,6 +7,9 @@ import ProjectList from './components/pages/ProjectList';
 import ProjectCreate from './components/pages/ProjectCreate';
 import ProjectEdit from './components/pages/ProjectEdit';
 import ProjectShow from './components/pages/ProjectShow';
+import Video from './components/pages/Video';
+import VideoList from './components/pages/VideoList';
+import VideoCreate from './components/pages/VideoCreate';
 
 //axios.defaults.baseURL = 'https://mock-api.binaryboxtuts.com/'
 axios.defaults.baseURL = 'http://localhost:3302/'
@@ -18,6 +21,9 @@ axios.interceptors.request.use(function (config) {
 const router = createRouter({
     history: createWebHistory(),
     routes: [
+      { path: '/youtube', component: Video },
+      { path: '/video/list', component: VideoList },
+      { path: '/video/create', component: VideoCreate },
       { path: '/', component: ProjectList },
       { path: '/create', component: ProjectCreate },
       { path: '/edit/:id', component: ProjectEdit },
